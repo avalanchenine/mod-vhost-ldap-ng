@@ -1,0 +1,28 @@
+/* mod_vhost_ldap CSS */
+/* HTML */
+* { margin: 0px; padding: 0px;}
+body { font-family: Verdana,sans-serif; background-color: #d8f273;/*#ceef71; #f7e475;*/ font-size: 13px;}
+ul { list-style-type: none; }
+
+/* site's blocks */
+#main { margin: 10px auto; border: 1px solid #08b236; width: 840px; overflow: hidden; background-color:#f9f9f9; -moz-border-radius: 5px 33px 5px 5px;}
+#header { width: 834px; height: 30px; margin: 3px 3px 25px; background-color: #037420; -moz-border-radius: 3px 30px 0px 0px;}
+#left { width: 130px; margin: 0px 35px 20px 5px; border-right: 2px solid #393939; float: left; padding:15px 0px 40px; }
+#content { width: 620px; text-align: justify; float: left; margin-bottom: 20px; }
+#footer { height: 25px; margin: 10px auto; border: 1px solid #07a125; width: 840px; overflow: hidden; background-color:#f9f9f9; -moz-border-radius: 5px;}
+
+/* others */
+#project_name { line-height: 30px; color: #fff; margin-left: 15px; font-weight: bold; }
+
+/* tag customization */
+#left ul {margin-top: 20px;}
+#left li {padding-left: 15px; line-height: 26px; }
+#left li#active { background-color: #f3f3f3; }
+#left h3 { color: #225500; padding: 6px;}
+#left a:link, #left a:visited { color: #445500; text-decoration: none; }
+#left li:hover { border-right: 5px solid #363636; background-color: #e1e1e1; }
+
+#content div.block { margin-bottom: 25px; }
+#content div.block h3 { line-height: 35px; border-left: 7px solid #393939; padding-left: 10px; margin-bottom: 10px; }
+#content div.block div.details { text-indent: 3px; }
+
