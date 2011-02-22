@@ -4,8 +4,8 @@
 	<title>mod_vhost_ldap_ng - New generation Apache2 module for Virtual hosts configuration over LDAP</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="index, follow" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
+	<meta name="keywords" content="apache module, dynamic virtualhost, apache ldap, virtualhost ldap, vhost ldap module, apache ldap module" />
+	<meta name="description" content="Mod-vhost-ldap-ng: new generation mod vhost LDAP module" />
 	
 	<link rel="stylesheet" href="./styles.css" type="text/css" />  
 </head>
@@ -28,19 +28,33 @@
 			<div class="block">
 				<h3>Project description</h3>
 				<div class="details">
-					mod-vhost-ldap is an Apache 2.x module for storing and configuring virtual hosts from LDAP. It supports DocumentRoot, ScriptAlias, ServerName, ServerAlias, ServerAdmin, and SuexecUserGroup directives. It's built on top of mod_ldap, so it uses its caching capabilities and can be used with a threaded Apache httpd.
+					mod-vhost-ldap is an Apache 2.x module for storing and configuring virtual hosts from LDAP. It supports:
+<ul>
+<li><b>DocumentRoot</b></li>
+<li><b>ServerName</b></li>
+<li><b>ServerAlias</b></li>
+<li><b>ServerAdmin</b></li>
+<li><b>SuexecGid</b></li>
+<li><b>SuexecUid</b></li>
+<li><b>ScriptAlias</b></li>
+<li><b>Alias</b></li>
+<li><b>Redirect</b></li>
+<li><b>ErrorLog</b></li>
+</ul> directives.
+<p></p>
 				</div>
 			</div>
 			<div class="block">
-				<h3>Latest release</h3>
+				<h3>New features</h3>
 				<div class="details">
-					mod-vhost-ldap is an Apache 2.x module for storing and configuring virtual hosts from LDAP. It supports DocumentRoot, ScriptAlias, ServerName, ServerAlias, ServerAdmin, and SuexecUserGroup directives. It's built on top of mod_ldap, so it uses its caching capabilities and can be used with a threaded Apache httpd.
+				<p>mod-vhost-ldap-ng implements a new LDAP library (OpenLDAP), with multiple attribute support for Alias, Redirect and ScriptAlias.</p>
+				<p>Now is possible to setup a root directory for vhosts that will be appended to every relative DocumentRoot.</p>
 				</div>
 			</div>
 			<div class="block">
 				<h3>Know bugs</h3>
 				<div class="details">
-					mod-vhost-ldap is an Apache 2.x module for storing and configuring virtual hosts from LDAP. It supports DocumentRoot, ScriptAlias, ServerName, ServerAlias, ServerAdmin, and SuexecUserGroup directives. It's built on top of mod_ldap, so it uses its caching capabilities and can be used with a threaded Apache httpd.
+				<p>Actually we are considering to implement a vhosts cache on apr_shm to solve some problem during cache items retrieve</p>
 				</div>
 			</div>
 		</div>
