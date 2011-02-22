@@ -2,8 +2,7 @@
 /* HTML */
 * { margin: 0px; padding: 0px;}
 body { font-family: Verdana,sans-serif; background-color: #d8f273;/*#ceef71; #f7e475;*/ font-size: 13px;}
-ul { list-style-type: none; }
-
+ul {  list-style-type: none;}
 /* site's blocks */
 #main { margin: 10px auto; border: 1px solid #08b236; width: 840px; overflow: hidden; background-color:#f9f9f9; -moz-border-radius: 5px 33px 5px 5px;}
 #header { width: 834px; height: 30px; margin: 3px 3px 25px; background-color: #037420; -moz-border-radius: 3px 30px 0px 0px;}
@@ -25,4 +24,5 @@ ul { list-style-type: none; }
 #content div.block { margin-bottom: 25px; }
 #content div.block h3 { line-height: 35px; border-left: 7px solid #393939; padding-left: 10px; margin-bottom: 10px; }
 #content div.block div.details { text-indent: 3px; }
-
+#content div.details ul { list-style-type: disc; margin: 15px 25px;}
+#content div.details li { margin-left: 4px; }
