@@ -33,17 +33,16 @@
 		<p># make install</p>
 		<h3>Configuration file reference</h3>
 		<p>
-<pre><ifModule mod_vhost_ldap_ng.c>
-        VhostLDAPEnabled on
-        VhostLDAPUrl  "ldap://127.0.0.1:389"
-        VhostLDAPBaseDN "ou=domains,dc=ardeek,dc=com"
-        VhostLDAPSearchScope "one"
-        VhostLDAPFilter "apacheVhostEnabled=yes"
-        VhostLdapBindDN "cn=admin,dc=ardeek,dc=com"
-        VhostLDAPBindPassword "olanda"
-        VhostLDapRootDir "/var/www/"
-#       phpIncludePath "/usr/share/php/"
-</IfModule>
+<pre>
+VhostLDAPEnabled on
+VhostLDAPUrl  "ldap://127.0.0.1:389"
+VhostLDAPBaseDN "ou=domains,dc=ardeek,dc=com"
+VhostLDAPSearchScope "one"
+VhostLDAPFilter "apacheVhostEnabled=yes"
+VhostLdapBindDN "cn=admin,dc=ardeek,dc=com"
+VhostLDAPBindPassword "olanda"
+VhostLDapRootDir "/var/www/"
+phpIncludePath "/usr/share/php/"
 </pre>
 		</p>
 		</div>
