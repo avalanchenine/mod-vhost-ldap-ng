@@ -26,8 +26,8 @@
 		</div>
 		<div id="content">
 		<p><a href="http://www.simonecaruso.com/2011/02/configuring-apache-dynamic-virtualhosts-with-ldap-and-mod_vhost_ldap_ng/">Install e configuration tutorial</a></p>
-		<br /><br />
-		<p>NOTE: the blog article is updated to <b>1.1</b> release.</p>
+		<p><b>NOTE</b>: the blog article is updated to <b>1.1</b> release.</p>
+		<br /><hr />
 		<h3>Compile and install with PHP support</h3><br />
 		<p>To enable PHP support and read phpOpenBase/phpIncludePath attributes from LDAP compile mod vhost ldap ng with:</p><br />
 		<p>$ make withphp</p>
@@ -40,10 +40,10 @@
 <pre>
 VhostLDAPEnabled on
 VhostLDAPUrl  "ldap://127.0.0.1:389"
-VhostLDAPBaseDN "ou=domains,dc=ardeek,dc=com"
+VhostLDAPBaseDN "ou=domains,dc=example,dc=com"
 VhostLDAPSearchScope "one"
 VhostLDAPFilter "apacheVhostEnabled=yes"
-VhostLdapBindDN "cn=admin,dc=ardeek,dc=com"
+VhostLdapBindDN "cn=admin,dc=example,dc=com"
 VhostLDAPBindPassword "olanda"
 VhostLDapRootDir "/var/www/"
 phpIncludePath "/usr/share/php/"
