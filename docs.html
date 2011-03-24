@@ -75,6 +75,38 @@ VhostLDapRootDir "/var/www/"
 phpIncludePath "/usr/share/php/"
 </pre>
 		</p>
+		<br /><hr />
+		<h3>Example LDAP DIT for virtualhosts</h3>
+		<br />
+		<pre>dn: dc=example,dc=com
+dc: example
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: nodomain
+
+dn: ou=domains,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: domains
+
+dn: dc=test.it,ou=domains,dc=example,dc=com
+dc: test.it
+objectClass: dcObject
+objectClass: top
+objectClass: apacheConfig
+apacheDocumentRoot: test.it/html
+apacheServerName: test.it
+apacheServerAlias: www.test.it
+
+dn: dc=test2.it,ou=domains,dc=example,dc=com
+dc: test2.it
+objectClass: dcObject
+objectClass: top
+objectClass: apacheConfig
+apacheDocumentRoot: /var/www/test.it/html
+apacheServerName: test2.it
+apacheServerAlias: www.test2.it</pre>
 		</div>
 	</div>
 </div>
