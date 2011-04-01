@@ -4,9 +4,8 @@
 	<title>mod_vhost_ldap_ng - New generation Apache2 module for Virtual hosts configuration over LDAP</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="index, follow" />
-	<meta name="keywords" content="" />
-	<meta name="keywords" content="apache ldap virtualhost, download, dynamic virtualhost, apache ldap, virtualhost ldap, vhost ldap module, apache ldap module, mod vhost ldap, ldap vhost" />
-	<meta name="description" content="" />
+	<meta name="keywords" content="apache virtualhost ldap , apache module, dynamic virtualhost, apache ldap, virtualhost ldap, vhost ldap module, apache ldap module, mod vhost ldap, ldap vhostn, php open_basedir, php include_path" />
+	<meta name="description" content="mod_vhost_ldap_ng - New generation Apache2 module for Virtual hosts configuration over LDAP" />
 	
 	<link rel="stylesheet" href="./styles.css" type="text/css" />
 <script type="text/javascript">
@@ -33,20 +32,32 @@
 			<h3>Resources</h3>
 			<ul>
 				<li><a href="index.html">home</a></li>
-				<li><a href="changelist.html">changelist</a></li>
-				<li id="active"><a href="download.html">download</a></li>
+				<li id="active"><a href="changelist.html">changelist</a></li>
+				<li><a href="download.html">download</a></li>
 				<li><a href="docs.html">docs</a></li>
 				<li><a href="sponsors.html">sponsors</a></li>
 			</ul>
 		</div>
 		<div id="content">
 			<div class="block">
-				<h3>Downloads</h3>
+				<h3>Changelist</h3>
 				<div class="details">
-                                        <h4>Stable</h4>
-                                        <a href="https://github.com/Ardeek/mod-vhost-ldap-ng/tarball/v1.1.2">Version 1.1.2</a><br /><br />
-					<h4>Development</h4>
-                                        <a href="https://github.com/Ardeek/mod-vhost-ldap-ng/archives/master">Trunk release</a>
+					<h4>r 1.1.2 - 15/03/2011</h4>
+					<ul>
+						<li>added support for mod_alias compliant parameter: apacheRedirect;</li>
+					</ul>
+					
+					<b>Usage example:</b>
+					<div class="codehl">
+						<span class="output">apacheRedirect / [<em>status</em>] URL</span>
+					</div>
+					For [<em>status</em>] parameter refer to <a href="http://httpd.apache.org/docs/2.0/mod/mod_alias.html#redirect">mod_alias#redirect</a>
+					
+					<h4>r 1.1.1 - 10/02/2011</h4>
+					<ul>
+						<li>added support for dynamic PHP open_basedir and include_path configuration;</li>
+						<li>added support for static PHP include path inside apache files.</li>
+					</ul>
 				</div>
 			</div>
 		</div>

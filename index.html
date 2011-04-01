@@ -32,6 +32,7 @@
 			<h3>Resources</h3>
 			<ul>
 				<li id="active"><a href="index.html">home</a></li>
+				<li><a href="changelist.html">changelist</a></li>
 				<li><a href="download.html">download</a></li>
 				<li><a href="docs.html">docs</a></li>
 				<li><a href="sponsors.html">sponsors</a></li>
@@ -42,55 +43,67 @@
 				<h3>Project description</h3>
 				<div class="details">
 					<p>mod-vhost-ldap-ng is an Apache virtualhost module that dynamically loads configuration from OpenLDAP, this allows administrators to configure webservers with interfaces like phpLDAPAdmin.</p><br />
-<p>mod-vhost-ldap-ng supports:</p>
-<ul>
-<li><b>DocumentRoot</b></li>
-<li><b>ServerName</b></li>
-<li><b>ServerAlias</b></li>
-<li><b>ServerAdmin</b></li>
-<li><b>SuexecGid</b></li>
-<li><b>SuexecUid</b></li>
-<li><b>ScriptAlias</b></li>
-<li><b>Alias</b></li>
-<li><b>Redirect</b></li>
-<li><b>ErrorLog</b></li>
-<li><b>phpOpenBasedir</b></li>
-<li><b>phpIncludePath</b></li>
-</ul>
-<p>directives.</p>
 				</div>
 			</div>
 			<div class="block">
-				<h3>New features</h3>
+				<h3>Features</h3>
 				<div class="details">
-				<p>mod-vhost-ldap-ng implements a new LDAP library (OpenLDAP), with <b>multiple attribute support</b> for Alias, Redirect and ScriptAlias parameters.</p>
-				<p>Now is possible to setup a root directory for vhosts that will be appended to every relative DocumentRoot.</p>
-				<p>Release 1.1 now <b>supports PHP open_basedir and include_path</b> dynamic LDAP configuration and a static one from apache files with <b>phpIncludePath</b> parameter.</p><br />
-                                <p>Released the <b>commercial version</b> with lots of performance improvements and shared memory cache!</p>
-				<p>Tag 1.1.2 now support a mod_alias redirect compliant parameter, <b>apacheRedirect</b>.
-				apacheRedirect / [status] URL
-				For [status] parameter refer to http://httpd.apache.org/docs/2.0/mod/mod_alias.html#redirect
-				</p>
+					<ul style="list-style-type: square;">
+						<li>based on new LDAP library (OpenLDAP);</li>
+						<li>implements <b>multiple attribute support</b>;</li>
+						<li>implements <b>base root directory</b> for vhosts (every vhost DocumentRoot is relative to that base, simplifying systems changes);</li>
+						<li>allows per vhosts PHP customizations;</li>
+						<li>supports <b>mod_alias</b> compliant redirect parameter.</li>
+					</ul>
+					<h4>Commercial version only:</h4>
+					<ul style="list-style-type: square;">
+						<li>performance improvements;</li>
+						<li>caching over <b>shared memory</b>.</li>
+					</ul>
+
 				</div>
 			</div>
-                        <div class="block">
-				<h3>TODO</h3>
+			<div class="block">
+				<h3>Available attributes</h3>
 				<div class="details">
-				<p>Per virtualhost bandwidth throttling (like mod_cband)</p>
-				<p>Per virtualhost traffic quota (like mod_cband)</p>
-                                <p>SQL traffic quota logging</p>
-                                <p>Thinking: Usage of spinlocks for SHM operations</p>
+					<ul>
+						<li><b>DocumentRoot</b></li>
+						<li><b>ServerName</b></li>
+						<li><b>ServerAlias</b></li>
+						<li><b>ServerAdmin</b></li>
+						<li><b>SuexecGid</b></li>
+						<li><b>SuexecUid</b></li>
+						<li><b>ScriptAlias</b></li>
+						<li><b>Alias</b></li>
+						<li><b>Redirect</b></li>
+						<li><b>ErrorLog</b></li>
+						<li><b>phpOpenBasedir</b></li>
+						<li><b>phpIncludePath</b></li>
+					</ul>
+				</div>
+			</div>
+			<div class="block">
+				<h3>TODO (aka wishlist)</h3>
+				<div class="details">
+					<ul  style="list-style-type: circle;">
+						<li>per virtualhost bandwidth throttling (like mod_cband);</li>
+						<li>per virtualhost traffic quota (like mod_cband);</li>
+						<li>SQL traffic quota logging;</li>
+						<li>Thinking: Usage of spinlocks for SHM operations.</li>
+					</ul>
 				</div>
 			</div>
 			<div class="block">
 				<h3>Known bugs</h3>
 				<div class="details">
-				<p>Actually there are no known bugs, please contact us if you found some.</p>
+					<p>Actually there are no known bugs.</p>
+					<p>If you found some please contact us via mail or, better, through project <a href="https://github.com/Ardeek/mod-vhost-ldap-ng/issues">Issues Tracker</a>.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div id="footer"></div>
+<div id="footer">
+</div>
 </body>
 </html>

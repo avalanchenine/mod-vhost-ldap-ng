@@ -9,7 +9,6 @@
 	
 	<link rel="stylesheet" href="./styles.css" type="text/css" /> 
 <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-9415726-6']);
   _gaq.push(['_trackPageview']);
@@ -19,7 +18,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 </head>
 <body>
@@ -32,81 +30,107 @@
 			<h3>Resources</h3>
 			<ul>
 				<li><a href="index.html">home</a></li>
+				<li><a href="changelist.html">changelist</a></li>
 				<li><a href="download.html">download</a></li>
 				<li id="active"><a href="docs.html">docs</a></li>
 				<li><a href="sponsors.html">sponsors</a></li>
 			</ul>
 		</div>
 		<div id="content">
-		<p><a href="http://www.simonecaruso.com/2011/02/configuring-apache-dynamic-virtualhosts-with-ldap-and-mod_vhost_ldap_ng/">Install e configuration tutorial</a></p>
-		<p><b>NOTE</b>: the blog article is updated to <b>1.1</b> release.</p>
-		<br /><hr />
-		<h3>Compile and install with PHP support</h3><br />
-		<p>To enable PHP support and read phpOpenBase/phpIncludePath attributes from LDAP compile mod vhost ldap ng with:</p><br />
-		<p>$ make withphp</p>
-		<p># make install</p>
-		<br />
-		<hr />
-		<h3>Version 1.1.1 - configure options</h3><br />
-		<p>
-			With v1.1.1 we added gnu autotools configure script, it accepts two options:<br /> 
-			<ul>
-			<li><b>--enable-php</b> - Enable mod_php open_basedir and include_path ini options</li>
-			<li><b>--enable-debug</b> - Build soruce with debugging symbols</li>
-			</ul>
-			<br />To install the module now type:<br />
-			<p>$ ./configure --enable-php </p>
-			<p>$ make</p>
-	                <p># make install</p>
-		</p><br />
-		<hr />
-		<h3>Configuration file reference</h3>
-		<br />
-		<p>
-<pre>
-VhostLDAPEnabled on
-VhostLDAPUrl  "ldap://127.0.0.1:389"
-VhostLDAPBaseDN "ou=domains,dc=example,dc=com"
-VhostLDAPSearchScope "one"
-VhostLDAPFilter "apacheVhostEnabled=yes"
-VhostLdapBindDN "cn=admin,dc=example,dc=com"
-VhostLDAPBindPassword "secret"
-VhostLDapRootDir "/var/www/"
-phpIncludePath "/usr/share/php/"
-</pre>
-		</p>
-		<br /><hr />
-		<h3>Example LDAP DIT for virtualhosts</h3>
-		<br />
-		<pre>dn: dc=example,dc=com
-dc: example
-objectClass: top
-objectClass: dcObject
-objectClass: organization
-o: nodomain
-
-dn: ou=domains,dc=example,dc=com
-objectClass: organizationalUnit
-objectClass: top
-ou: domains
-
-dn: dc=test.it,ou=domains,dc=example,dc=com
-dc: test.it
-objectClass: dcObject
-objectClass: top
-objectClass: apacheConfig
-apacheDocumentRoot: test.it/html
-apacheServerName: test.it
-apacheServerAlias: www.test.it
-
-dn: dc=test2.it,ou=domains,dc=example,dc=com
-dc: test2.it
-objectClass: dcObject
-objectClass: top
-objectClass: apacheConfig
-apacheDocumentRoot: /var/www/test.it/html
-apacheServerName: test2.it
-apacheServerAlias: www.test2.it</pre>
+			<div class="block">
+				<h3>Base docs</h3>
+				<div class="details">
+					<ul>
+						<li><a target="_blank" href="http://www.simonecaruso.com/2011/02/configuring-apache-dynamic-virtualhosts-with-ldap-and-mod_vhost_ldap_ng/">install and configuration tutorial</a> (updated to version 1.1);</li>
+						<li><a href="#php-support">compile and install with PHP support</a>;</li>
+						<li><a href="#advanced-options">advanced configure options</a>;</li>
+						<li><a href="#conf-file-reference">configuration file reference</a>;</li>
+						<li><a href="#sample-ldap-dit">sample LDAP DIT for virtualhost</a>.</li>
+					</ul>
+				</div>
+			</div>
+			<hr style="margin: 20px 0px;">
+			<div class="block" id="php-support">
+				<h3>Compile and install with PHP support</h3>
+				<div class="details">
+					To enable PHP support and read phpOpenBase/phpIncludePath attributes from LDAP compile mod vhost ldap ng with:
+					<div class="codehl">
+						<span class="codeline">$ make withphp</span>
+						<span class="codeline">$ make install</span>
+					</div>
+				</div>
+			</div>
+			<div class="block" id="advanced-options">
+				<h3>Advanced configure options</h3>
+				<div class="details">
+					From ver. 1.1.1 has been added gnu autotools configure script, it accepts two options:
+					<ul>
+						<li><b>--enable-php</b> - Enable mod_php open_basedir and include_path ini options</li>
+						<li><b>--enable-debug</b> - Build source with debugging symbols</li>
+					</ul>
+					To install the module now type:
+					<div class="codehl">
+						<span class="codeline">$ ./configure --enable-php</span>
+						<span class="codeline">$ make</span>
+						<span class="codeline">$ make install</span>
+					</div>
+				</div>
+			</div>
+			<div class="block" id="conf-file-reference">
+				<h3>Configuration file reference</h3>
+				<div class="details">
+					<div class="codehl">
+						<span class="output">VhostLDAPEnabled on</span>
+						<span class="output">VhostLDAPUrl  "ldap://127.0.0.1:389"</span>
+						<span class="output">VhostLDAPBaseDN "ou=domains,dc=example,dc=com"</span>
+						<span class="output">VhostLDAPSearchScope "one"</span>
+						<span class="output">VhostLDAPFilter "apacheVhostEnabled=yes"</span>
+						<span class="output">VhostLdapBindDN "cn=admin,dc=example,dc=com"</span>
+						<span class="output">VhostLDAPBindPassword "secret"</span>
+						<span class="output">VhostLDapRootDir "/var/www/"</span>
+						<span class="output">phpIncludePath "/usr/share/php/"</span>
+					</div>
+				</div>
+			</div>
+			<div class="block" id="sample-ldap-dit">
+				<h3>Sample: LDAP DIT for virtualhosts</h3>
+				<div class="details">
+					<div class="codehl">
+						<span class="output">dn: dc=example,dc=com</span>
+						<span class="output">dc: example</span>
+						<span class="output">objectClass: top</span>
+						<span class="output">objectClass: dcObject</span>
+						<span class="output">objectClass: organization</span>
+						<span class="output">o: nodomain</span>
+					</div>
+					<div class="codehl">
+						<span class="output">dn: ou=domains,dc=example,dc=com</span>
+						<span class="output">objectClass: organizationalUnit</span>
+						<span class="output">objectClass: top</span>
+						<span class="output">ou: domains</span>
+					</div>
+					<div class="codehl">
+						<span class="output">dn: dc=<em>test.it</em>,ou=domains,dc=example,dc=com</span>
+						<span class="output">dc: <em>test.it</em></span>
+						<span class="output">objectClass: dcObject</span>
+						<span class="output">objectClass: top</span>
+						<span class="output">objectClass: apacheConfig</span>
+						<span class="output">apacheDocumentRoot: <em>test.it/html</em></span>
+						<span class="output">apacheServerName: <em>test.it</em></span>
+						<span class="output">apacheServerAlias: <em>www.test.it</em></span>
+					</div>
+					<div class="codehl">
+						<span class="output">dn: dc=<em>test2.it</em>,ou=domains,dc=example,dc=com</span>
+						<span class="output">dc: <em>test2.it</em></span>
+						<span class="output">objectClass: dcObject</span>
+						<span class="output">objectClass: top</span>
+						<span class="output">objectClass: apacheConfig</span>
+						<span class="output">apacheDocumentRoot: <em>test2.it/html</em></span>
+						<span class="output">apacheServerName: <em>test2.it</em></span>
+						<span class="output">apacheServerAlias: <em>www.test2.it</em></span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
